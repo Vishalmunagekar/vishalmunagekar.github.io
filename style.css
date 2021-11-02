@@ -1,0 +1,20 @@
+body{
+    font-family: 'Lato';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.topbar {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-color: white;
+}
+
+.container {
+    width: auto;
+    padding: 0 15px;
+}

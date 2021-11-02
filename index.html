@@ -5,191 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
 
-
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <h3>SAI-Classes</h3>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarScroll">
-
-                    <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-                        <li class="nav-item ml-3">
-                            <a class="nav-link font-weight-bold" href="./home.html">HOME</a>
-                        </li>
-                        <li class="nav-item ml-3">
-                            <a class="nav-link font-weight-bold" href="./examination.html">EXAMINATION</a>
-                        </li>
-                        <li class="nav-item dropdown ml-3">
-                            <a class="nav-link dropdown-toggle font-weight-bold" href=" #" id="navbarScrollingDropdown"
-                                role="button" data-toggle="dropdown" aria-expanded="false">
-                                SYLLABUS
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item" href="#">10th</a></li>
-                                <li><a class="dropdown-item" href="#">09th</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Others</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown ml-3">
-                            <a class="nav-link dropdown-toggle font-weight-bold" href=" #" id="navbarScrollingDropdown"
-                                role="button" data-toggle="dropdown" aria-expanded="false">
-                                SECTIONS
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item" href="./exam_page.html">SECTIONS 01</a></li>
-                                <li><a class="dropdown-item" href="./paper.html">SECTIONS 02</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">SECTIONS 03</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item ml-3">
-                            <a class="btn btn-primary" href="./login.html" role="button">LOGIN</a>
-                        </li>
-                        <li class="nav-item ml-3">
-                            <a class="btn btn-warning" href="./signup0.html" role="button">SIGNUP</a>
-                        </li>
-                        <li class="nav-item ml-3">
-                            <div class="btn-group open">
-                                <a class="btn btn-primary" href="./profile.html"><i class="fa fa-user fa-fw"></i> User</a>
-                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a class="dropdown-item" href="./userEdit.html"><i class="fa fa-pencil fa-fw"></i>&nbsp;Edit</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fa fa-trash-o fa-fw"></i>&nbsp;Delete</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fa fa-ban fa-fw"></i>&nbsp;Ban</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"><i class="fa fa-unlock"></i>&nbsp;Make admin</a></li>
-                                </ul>
-                              </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
-    <section>
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-4">Hello, world!</h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
-                    attention to featured content or information.</p>
-                <hr class="my-4">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </div>
-        </div>
-    </section>
-    <section class="mb-5">
+<section class="topbar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>      
         <div class="container">
-            <h1 class="mb-5 display-4 text-center">How it works?</h1>
-            <div class="row d-flex justify-content-between text-center">
-                <div class="col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./images/IMG_20200307_132413_462.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./images/IMG_20200307_132413_462.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="./images/IMG_20200307_132413_462.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</span></a>
+                  </li>
+                </ul>
+              </div>
         </div>
-    </section>
-    <section class="mb-5">
+      </nav>    
+</section>
+<section>
+    <div class="jumbotron bg-light">
         <div class="container">
-            <h1 class="mb-5 display-4" style="text-align: center;">Staff</h1>
             <div class="row">
-                <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="./images/IMG_20200307_132413_462.jpg" class="img-fluid rounded-circle p-4" alt="">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                <div class="col-lg-3 col-sm-6">
+                    <img src="./images/vishal_DP.jpeg" class="img-fluid mb-2" style="max-width: 15rem;" alt="profile photo">
                 </div>
-                <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                          <div class="col-md-4">
-                            <img src="./images/IMG_20200307_132413_462.jpg" class="img-fluid rounded-circle p-4" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                <div class="col-lg-9 col-sm-6">
+                    <h1 style="font-weight: 380;">Vishal Munagekar</h1>
+                    <h3 class="text-muted" style="font-weight: 300;">Fullstack Developer</h3>
+                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <hr class="my-4">
+                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="d-flex align-items-center" style="height: 10rem; background-color: #e9ecef;">
-        <footer class="container">
-            <p class="float-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2017-2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-          </footer>
-    </section>
-    <section>
-        <a class="gotopbtn" href="#"><i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i></a>
-    </section>
+    </div>
+</section>
+<section>
+    <h2 class="text-center mt-3" style="font-weight: 300;">Projects</h2>
+    <div class="row p-4">
+        <div class="col-lg-3 col-sm-1 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Pizza Hut Clone</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="float-right"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-1 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Social Media clone</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="float-right"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-1 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Red-It Clone</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="float-right"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-1 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tuition Management (ERP)</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="float-right"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+</section>
 
+<section class="Subscribe">
+    <div class="bg-light text-dark text-center p-3">
+        <div class="container">
+            <blockquote class="blockquote mb-0">
+                <p>A well-known quote, contained in a blockquote element.</p>
+                <footer class="blockquote-footer text-dark mb-2">
+                <small>
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+                </footer>
+                <form class="d-flex justify-content-center">
+                    <div class="input-group mb-3" style="max-width: 30rem">
+                        <input type="email" class="form-control" placeholder="Type your email..." aria-label="email" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-warning" type="submit" id="button-addon2">Button</button>
+                        </div>
+                      </div>
+                </form>
+            </blockquote>
+        </div>    
+    </div>
+</section>
+
+<section>
+    <footer class="footermt-auto py-4 bg-dark text-white text-center">
+        <div class="mb-2">
+            <i class="fa fa-github mr-2 fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square mr-2 fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-instagram mr-2 fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-linkedin-square mr-2 fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play mr-2 fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-stack-overflow mr-2 fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-envelope mr-2 fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="container">
+          <span>© 2021 | Vishal Munagekar</span>
+        </div>
+      </footer>
+</section>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
