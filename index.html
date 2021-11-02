@@ -1,18 +1,210 @@
 ---
 layout: default
+published: true
 ---
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<body>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <h3>SAI-Classes</h3>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarScroll">
+
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+                        <li class="nav-item ml-3">
+                            <a class="nav-link font-weight-bold" href="./home.html">HOME</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="nav-link font-weight-bold" href="./examination.html">EXAMINATION</a>
+                        </li>
+                        <li class="nav-item dropdown ml-3">
+                            <a class="nav-link dropdown-toggle font-weight-bold" href=" #" id="navbarScrollingDropdown"
+                                role="button" data-toggle="dropdown" aria-expanded="false">
+                                SYLLABUS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">10th</a></li>
+                                <li><a class="dropdown-item" href="#">09th</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Others</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown ml-3">
+                            <a class="nav-link dropdown-toggle font-weight-bold" href=" #" id="navbarScrollingDropdown"
+                                role="button" data-toggle="dropdown" aria-expanded="false">
+                                SECTIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="./exam_page.html">SECTIONS 01</a></li>
+                                <li><a class="dropdown-item" href="./paper.html">SECTIONS 02</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">SECTIONS 03</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="btn btn-primary" href="./login.html" role="button">LOGIN</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="btn btn-warning" href="./signup0.html" role="button">SIGNUP</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <div class="btn-group open">
+                                <a class="btn btn-primary" href="./profile.html"><i class="fa fa-user fa-fw"></i> User</a>
+                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="./userEdit.html"><i class="fa fa-pencil fa-fw"></i>&nbsp;Edit</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa fa-trash-o fa-fw"></i>&nbsp;Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa fa-ban fa-fw"></i>&nbsp;Ban</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa fa-unlock"></i>&nbsp;Make admin</a></li>
+                                </ul>
+                              </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
+                    attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </div>
+        </div>
+    </section>
+    <section class="mb-5">
+        <div class="container">
+            <h1 class="mb-5 display-4 text-center">How it works?</h1>
+            <div class="row d-flex justify-content-between text-center">
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/IMG_20200307_132413_462.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/IMG_20200307_132413_462.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/IMG_20200307_132413_462.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mb-5">
+        <div class="container">
+            <h1 class="mb-5 display-4" style="text-align: center;">Staff</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-4">
+                            <img src="./images/IMG_20200307_132413_462.jpg" class="img-fluid rounded-circle p-4" alt="">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-4">
+                            <img src="./images/IMG_20200307_132413_462.jpg" class="img-fluid rounded-circle p-4" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="d-flex align-items-center" style="height: 10rem; background-color: #e9ecef;">
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2017-2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+          </footer>
+    </section>
+    <section>
+        <a class="gotopbtn" href="#"><i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i></a>
+    </section>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/ac865e99e2.js"></script>
+
+</html>
