@@ -19,8 +19,8 @@ body{
     .toast {
         position: fixed;
         top: 25rem;
-        /* margin-left: auto;
-        margin-right: 16%; */
+        margin-left: auto;
+        margin-right: 16%;
         z-index: 10;
     }
 } */
