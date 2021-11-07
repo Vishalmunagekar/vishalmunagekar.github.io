@@ -11,8 +11,16 @@ function sendEmail() { window.location.assign("mailto:vishalmunagekar@gmail.com"
 
 const count = document.getElementById('count');
 
+getVisitorCount();
+
 function updateVisitorCount() {
     fetch('https://api.countapi.xyz/update/vishal-munagekar/github.io/?amount=1')
+        .then(res => res.json())
+        .then(res => { count.innerHTML = res.value; });
+}
+
+function getVisitorCount() {
+    fetch('https://api.countapi.xyz/get/vishal-munagekar/github.io')
         .then(res => res.json())
         .then(res => { count.innerHTML = res.value; });
 }
