@@ -1,17 +1,17 @@
-let url = "";
-url = window.location.href;
-if(url.endsWith("/")){
-    document.getElementById("home").classList.add('active');
-} else if(url.endsWith("profile.html")) {
-    updateVisitorCount();
-    document.getElementById("blog").classList.add('active');
-}
+getVisitorCount();
 
 function sendEmail() { window.location.assign("mailto:vishalmunagekar@gmail.com"); }
 
 const count = document.getElementById('count');
 
-getVisitorCount();
+let value = "";
+value = localStorage.getItem('key');
+if(value == null){
+    value = Math.round((Math.random(1)) * 1000000);
+    updateVisitorCount();
+}
+
+localStorage.setItem('key',value);
 
 function updateVisitorCount() {
     fetch('https://api.countapi.xyz/update/vishal-munagekar/github.io/?amount=1')
@@ -24,11 +24,3 @@ function getVisitorCount() {
         .then(res => res.json())
         .then(res => { count.innerHTML = res.value; });
 }
-
-// var option = {
-//     animation : true,
-//     autohide : true,
-//     delay : 5000
-// }
-// $('.toast').toast({delay : 50000});
-// $('.toast').toast('show');
