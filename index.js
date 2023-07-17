@@ -37,10 +37,13 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
   if (this.checkValidity()) {
     // Retrieve form data
     var formData = new FormData(event.target);
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/application/json');
 
     // Send AJAX request
     fetch('https://formspree.io/f/xeqboqql', {
       method: "POST",
+      headers: headers,
       body: formData,
     })
       .then(function (response) {
@@ -49,14 +52,12 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         console.log(response.status);
         if(response.status === 200 || response.status === 302)
             $("#success-alert").show();
-        else
+        else if(response.status === 400){
             $("#error-alert").show();
+        } else {
+            $("#success-alert").show();
+        }
       })
-      .catch(function (error) {
-        // Handle error
-        // Perform any error handling or show error message
-        $("#error-alert").show();
-      });
     $("#myModal").modal("hide");
   } else {
     // If the form is invalid, display an error message or perform any other necessary action
