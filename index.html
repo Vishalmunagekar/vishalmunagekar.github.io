@@ -38,29 +38,50 @@
       </nav>    
 </section>
 
-<div class="alert alert-success alert-dismissible text-center fade show" role="alert">
-  <span style="font-size: medium;">Total numbers of Visitors <strong id="count" style="font-size: large;">&nbsp; 0</strong></span>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-
-<!-- <body>
-  <div aria-live="polite" aria-atomic="true" style="position: relative;">
-    <div class="toast">
-      <div class="toast-header">
-        <img src="./images/pngaaa.com-1848431.png" height="20rem" class="rounded mr-2" alt="...">
-        <strong class="mr-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="toast-body">
-        Hello, world! This is a toast message.
+<section>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enter Your Information</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        </div>
+        <!-- <form id="myForm" action="https://formspree.io/f/xeqboqql" method="POST"> -->
+          <form id="myForm">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="full-name">Full Name:</label>
+              <input type="text" class="form-control" id="full-name" name="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
       </div>
     </div>
-  </div> -->
+  </div>
+</section>
+
+<section class="d-flex justify-content-end">
+  <div id="success-alert" class="alert my-alert alert-success alert-dismissible text-center fade show shadow-lg rounded" role="alert">
+    <span style="font-size: medium;"><i class="fa fa-check-circle text-primary mr-2" aria-hidden="true"></i>Form submitted successfully!</span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="error-alert" class="alert my-alert alert-danger alert-dismissible text-center fade show shadow-lg rounded" role="alert">
+    <span style="font-size: medium;"><i class="fa fa-exclamation-triangle text-danger mr-2" aria-hidden="true"></i>Something went wrong!</span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</section>
 
 <section>
     <div class="jumbotron bg-light">
@@ -197,7 +218,14 @@
         </div>    
     </div>
 </section>
-
+<section>
+  <div class="alert alert-success alert-dismissible text-center fade show" role="alert">
+    <span style="font-size: medium;">Total numbers of Visitors <strong id="count" style="font-size: large;">&nbsp; 0</strong></span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</section>
 <section>
     <footer class="footer mt-auto py-4 bg-dark text-white text-center">
         <div class="mb-2">
