@@ -1,260 +1,351 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<section class="topbar sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>      
-        <div class="container m-auto">
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" id="home" href="./">Home</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="education" href="#education_section">Education</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="career" href="#career_section">Career</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="projects" href="#projects_section">Projects</span></a>
-                  </li>
-                </ul>
-              </div>
-        </div>
-      </nav>    
-</section>
 
-<section>
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Enter Your Information</h5>
-          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-        </div>
-        <!-- <form id="myForm" action="https://formspree.io/f/xeqboqql" method="POST"> -->
-          <form id="myForm">
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="full-name">Full Name:</label>
-              <input type="text" class="form-control" id="full-name" name="fullName" placeholder="Enter your full name" required>
+<body>
+    <div class="container m-6" style="max-width: 45%;">
+        <header class="mt-5">
+            <h1>Vishal Munagekar
+                <!-- <small>mlomb</small> -->
+            </h1>
+            <h3 class="mt-3">Software Engineer & Fullstack Developer</h3>
+            <p class="mt-4 text-slate-400">I build robust applications and open source software.</p>
+            <div class="mt-4">
+                <a class="text-slate-400 text-slate-100 transition-colors" href="https://github.com/Vishalmunagekar"><i class="fa fa-github mx-1 fa-2x"
+                        aria-hidden="true"></i></a>
+                <a class="text-slate-400 text-slate-100 transition-colors" href="https://twitter.com/MunagekarVish"><i class="fa fa-twitter-square mx-1 fa-2x"
+                        aria-hidden="true"></i></a>
+                <a class="text-slate-400 text-slate-100 transition-colors" href="https://www.instagram.com/vishal_munagekar/"><i class="fa fa-instagram mx-1 fa-2x"
+                        aria-hidden="true"></i></a>
+                <a class="text-slate-400 text-slate-100 transition-colors" href="https://www.linkedin.com/in/vishal-munagekar-144329148/"><i
+                        class="fa fa-linkedin-square mx-1 fa-2x" aria-hidden="true"></i></a>
+                <a class="text-slate-400 text-slate-100 transition-colors" href="https://www.youtube.com/channel/UCmOZfIZLZRYzvl21YtqS_iA"><i
+                        class="fa fa-youtube-play mx-1 fa-2x" aria-hidden="true"></i></a>
+                <a class="text-slate-400 text-slate-100 transition-colors" href="https://stackoverflow.com/users/15660269/vishal-munagekar"><i
+                        class="fa fa-stack-overflow mx-1 fa-2x" aria-hidden="true"></i></a>
+                <a class="text-slate-400 text-slate-100 transition-colors" href="https://in.pinterest.com/vishalmunagekar/"><i class="fa fa-pinterest-square mx-1 fa-2x"
+                        aria-hidden="true"></i></a>
+                <a class="text-slate-400 text-slate-100 transition-colors" href="javascript: void(0)"><i onclick="sendEmail();" class="fa fa-envelope mx-1 fa-2x"
+                        aria-hidden="true"></i></a>
             </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-            </div>
-          </div>
-          <div class="modal-footer">
-            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-            <button type="submit" class="btn btn-primary">Save</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="d-flex justify-content-end">
-  <div id="success-alert" class="alert my-alert alert-success alert-dismissible text-center fade show shadow-lg rounded" role="alert">
-    <span style="font-size: medium;"><i class="fa fa-check-circle text-primary mr-2" aria-hidden="true"></i>Form submitted successfully!</span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div id="error-alert" class="alert my-alert alert-danger alert-dismissible text-center fade show shadow-lg rounded" role="alert">
-    <span style="font-size: medium;"><i class="fa fa-exclamation-triangle text-danger mr-2" aria-hidden="true"></i>Something went wrong!</span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-</section>
-
-<section>
-    <div class="jumbotron bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6 d-flex justify-content-center">
-                    <img src="./images/vishal_DP.jpeg" class="img-fluid mb-2 rounded-circle" style="max-height: 15rem;" alt="profile photo">
-                </div>
-                <div class="col-lg-9 col-sm-6 text-center text-lg-left">
-                    <h1 style="font-weight: 380;">Vishal Munagekar</h1>
-                    <h3 class="text-muted" style="font-weight: 300;">Fullstack Developer<span><img src="./images/pngaaa.com-1848431.png" class="ml-2" alt="verified" width="18px"></span></h3>
-                    <p class="lead">Hi! I am Vishal! I work at TietoEvry.</p>
-                    <p class="lead" style="font-size: large;">I am a web developer with a good array of knowledge in many different front end and back end languages, responsive frameworks, databases, and best code practices.</p>
-                    <hr class="my-4">
-                    <p>My objective is simply to be the best web developer that I can be and to contribute to the technology industry all that I know and can do.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="education_section">
-  <h2 class="text-center mt-4" style="font-weight: 300;">Education</h2>
-  <h3 class="text-center mb-4"><i class="fa fa-graduation-cap" aria-hidden="true"></i></h3>
-  <div class="container mb-4">
-      <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Dr. JJ Magdum Polytechnic (DJJMP), Jaysingpur</h5>
-            <p class="card-text">Successfully completed Mechanical Engineering Diploma on year 2015</p>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">D. Y. Patil College of Engineering & Technology, Kasaba Bawada, Kolhapur</h5>
-            <p class="card-text">Successfully completed Mechanical Engineering Graduation on year 2018</p>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">SunBeam Institute of Information Technology, Pune-Karad</h5>
-            <h6>Authorized Training Center of C-DAC</h6>
-            <p class="card-text">Successfully completed Post Graduation Diploma on year 2020</p>
-          </div>
-        </div>
-  </div>
-</section>
-
-<section id="career_section">
-  <h2 class="text-center mt-4" style="font-weight: 300;">Career</h2>
-  <h3 class="text-center mb-4"><i class="fa fa-briefcase" aria-hidden="true"></i></h3>
-  <div class="container mb-4">
-      <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Bosch Chassis Systems India Pvt. Ltd. Chakan</h5>
-            <p class="card-text">Worked as a Quality Assurance (QA) engineers under PQA department for 1 Year. As a QA engineer my role was to focus on product and process improvement using Eight disciplines (8D) problem solving tool.</p>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">TietoEvry India Private Ltd. Pune</h5>
-            <p class="card-text">Currntly working as Fullstack Developer in Pyament and cash management Domain</p>
-          </div>
-        </div>
-  </div>
-</section>
-
-<section id="projects_section">
-    <h2 class="text-center my-3" style="font-weight: 300;">Projects</h2>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-3 col-sm-1 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title text-center">Pizza Hut Clone</h5>
-              <div class="text-center my-3"><i class="fa fa-cutlery fa-4x" aria-hidden="true"></i></div>
-              <p class="card-text">&emsp;Created a Online Pizza Ordering System is a very user friendly project because the Pizza Ordering Record and searching from categories is very simple, fast and data is secured. The user interface of the project is very simple. so user can easly place order.</p>
-              <a href="./project-1.html" class="float-right"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-1 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title text-center">Social Media clone</h5>
-              <div class="text-center my-3"><i class="fa fa-facebook fa-4x" aria-hidden="true"></i></div>
-              <p class="card-text">&emsp;Created a internet-based social media sites to stay connected with friends, family, colleagues, customers, or clients. Social networking can have a social purpose, a business purpose through sites like <a href="https://www.facebook.com/">Facebook</a> and <a href="https://www.instagram.com/">Instagram</a>.</p>
-              <a href="./project-2.html" class="float-right"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-1 mb-3">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-center">Red-It Clone</h5>
-                <div class="text-center my-3"><i class="fa fa-reddit-alien fa-4x" aria-hidden="true"></i></div>
-                <p class="card-text">&emsp;At its core, <a href="https://www.reddit.com/">Reddit</a> is a social sharing website. It's built around users submitting links, pictures, and text, which everyone can then vote on. The best content rises to the top, while downvoted content becomes less visible.</p>
-                <a href="./project-3.html" class="float-right"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-1 mb-3">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-center">Tuition Management (ERP)</h5>
-                <div class="text-center my-3"><i class="fa fa-users fa-4x" aria-hidden="true"></i></div>
-                <p class="card-text">&emsp;Created a school website addresses these audiences: Prospective parents and their children – who require information about the school, pastoral care, exam results, admission procedures.</p>
-                <a href="./project-4.html" class="float-right"><i class="fa fa-external-link-square fa-2x" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-</section>
-
-<section class="Subscribe">
-    <div class="bg-light text-dark text-center p-3">
-        <div class="container">
-            <blockquote class="blockquote mb-0">
-                <p>Subsciribing would make it easy to stay connected. I don't spam.</p>
-                <footer class="text-dark mb-2">
-                <small>
-                    Vishal Munagekar's letters <!-- <cite title="Source Title">Source Title</cite> -->
-                </small>
-                </footer>
-                <form class="d-flex justify-content-center">
-                    <div class="input-group mb-3" style="max-width: 30rem">
-                        <input type="email" class="form-control" placeholder="Type your email..." aria-label="email" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                          <button class="btn btn-warning" type="submit" id="button-addon2">Subscribe</button>
+        </header>
+        <main>
+            <section id="about">
+                <h4 class="py-4 text-uppercase sticky-top backdrop-blur">About</h4>
+                <p class="mb-4 text-slate-400">I develop applications for the web and other general software. I have a passion for
+                    details and raw performance. Every time I can, I try to build my projects in the open-source
+                    community. These days, I'm working as a freelancer and writing the thesis for my master in<!-- -->
+                    <span class="font-bold text-slate-300">Computer Science</span>@<a
+                        href="https://computacion.dc.uba.ar"
+                        class="font-bold text-amber-400 hover:text-amber-300 focus-visible:text-amber-300 transition-colors"
+                        target="_blank" rel="noopener noreferrer nofollow">UBA</a>. I am also open to switching to a
+                    more stable part-time job.
+                </p>
+                <p class="mb-4 text-slate-400">Do you want to build something with me or simply want to chat? You can find me on
+                    Discord as<!-- --> <b>mlomb</b> or you can reach out at<!-- --> <a href="mailto:hello@mlomb.dev"
+                        class="font-bold text-amber-400 hover:text-amber-300 focus-visible:text-amber-300 transition-colors"
+                        target="_blank">hello@mlomb.dev</a>!</p>
+            </section>
+            <section id="experience">
+                <h4 class="py-4 text-uppercase sticky-top backdrop-blur">Experience and Projects</h4>
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <header class="text-slate-500">JUN 2018 — PRESENT</header>
+                    </div>
+                    <div class="col-9">
+                        <div class="flex items-center justify-center gap-2">
+                            <img alt="" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                srcset="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75 2x"
+                                src="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75">
+                            <span>Freelance Web Developer</span>
                         </div>
-                      </div>
-                </form>
-            </blockquote>
-        </div>    
-    </div>
-</section>
-<section>
-  <div class="alert alert-success alert-dismissible text-center fade show" role="alert">
-    <span style="font-size: medium;">Total numbers of Visitors <strong id="count" style="font-size: large;">&nbsp; 0</strong></span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-</section>
-<section>
-    <footer class="footer mt-auto py-4 bg-dark text-white text-center">
-        <div class="mb-2">
-            <a href="https://github.com/Vishalmunagekar"><i class="fa fa-github mx-1 fa-2x" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/MunagekarVish"><i class="fa fa-twitter-square mx-1 fa-2x" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/vishal_munagekar/"><i class="fa fa-instagram mx-1 fa-2x" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/vishal-munagekar-144329148/"><i class="fa fa-linkedin-square mx-1 fa-2x" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/channel/UCmOZfIZLZRYzvl21YtqS_iA"><i class="fa fa-youtube-play mx-1 fa-2x" aria-hidden="true"></i></a>
-            <a href="https://stackoverflow.com/users/15660269/vishal-munagekar"><i class="fa fa-stack-overflow mx-1 fa-2x" aria-hidden="true"></i></a>
-            <a href="https://in.pinterest.com/vishalmunagekar/"><i class="fa fa-pinterest-square mx-1 fa-2x" aria-hidden="true"></i></a>
-            <a href="javascript: void(0)"><i onclick="sendEmail();" class="fa fa-envelope mx-1 fa-2x" aria-hidden="true"></i></a>
-        </div>
-        <div class="container">
-          <span>© 2021 | Vishal Munagekar</span>
-        </div>
-      </footer>
-</section>
+                        <div class="mt-1" aria-hidden="true">
+                            <header class="text-slate-500">Contractor</header>
+                        </div>
+                        <p class="text-slate-400">
+                            Working building web applications for clients. Each client has different requirements, but I
+                        generally work with the PERN stack. I adjust to the client's existing cloud infrastructure or
+                        provide a complete solution.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Danger</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Warning</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Info</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Light</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Dark</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <header class="text-slate-500">JUN 2018 — PRESENT</header>
+                    </div>
+                    <div class="col-9">
+                        <div class="flex items-center justify-center gap-2">
+                            <img alt="" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                srcset="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75 2x"
+                                src="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75">
+                            <span>Freelance Web Developer</span>
+                        </div>
+                        <div class="mt-1" aria-hidden="true">
+                            <header class="text-slate-500">Contractor</header>
+                        </div>
+                        <p class="text-slate-400">
+                            Working building web applications for clients. Each client has different requirements, but I
+                        generally work with the PERN stack. I adjust to the client's existing cloud infrastructure or
+                        provide a complete solution.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Danger</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Warning</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Info</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Light</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Dark</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <header class="text-slate-500">JUN 2018 — PRESENT</header>
+                    </div>
+                    <div class="col-9">
+                        <div class="flex items-center justify-center gap-2">
+                            <img alt="" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                srcset="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75 2x"
+                                src="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75">
+                            <span>Freelance Web Developer</span>
+                        </div>
+                        <div class="mt-1" aria-hidden="true">
+                            <header class="text-slate-500">Contractor</header>
+                        </div>
+                        <p class="text-slate-400">
+                            Working building web applications for clients. Each client has different requirements, but I
+                        generally work with the PERN stack. I adjust to the client's existing cloud infrastructure or
+                        provide a complete solution.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Danger</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Warning</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Info</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Light</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Dark</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <header class="text-slate-500">JUN 2018 — PRESENT</header>
+                    </div>
+                    <div class="col-9">
+                        <div class="flex items-center justify-center gap-2">
+                            <img alt="" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                srcset="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75 2x"
+                                src="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75">
+                            <span>Freelance Web Developer</span>
+                        </div>
+                        <div class="mt-1" aria-hidden="true">
+                            <header class="text-slate-500">Contractor</header>
+                        </div>
+                        <p class="text-slate-400">
+                            Working building web applications for clients. Each client has different requirements, but I
+                        generally work with the PERN stack. I adjust to the client's existing cloud infrastructure or
+                        provide a complete solution.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Danger</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Warning</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Info</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Light</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Dark</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <header class="text-slate-500">JUN 2018 — PRESENT</header>
+                    </div>
+                    <div class="col-9">
+                        <div class="flex items-center justify-center gap-2">
+                            <img alt="" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                srcset="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75 2x"
+                                src="/_next/image?url=%2Ffavicons%2Freact.png&amp;w=48&amp;q=75">
+                            <span>Freelance Web Developer</span>
+                        </div>
+                        <div class="mt-1" aria-hidden="true">
+                            <header class="text-slate-500">Contractor</header>
+                        </div>
+                        <p class="text-slate-400">
+                            Working building web applications for clients. Each client has different requirements, but I
+                        generally work with the PERN stack. I adjust to the client's existing cloud infrastructure or
+                        provide a complete solution.
+                        </p>
+                        <div class="mt-3">
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Danger</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Warning</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Info</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Light</span>
+                            <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Dark</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section class="my-5" id="projects">
+                <h4 class="py-4 text-uppercase sticky-top backdrop-blur">More Project</h4>
+                <div class="row sticky-top top-5 backdrop-blur">
+                    <div class="col-1">
+                        <span class="text-uppercase">Year</span>
+                    </div>
+                    <div class="col">
+                        <span class="text-uppercase">Project</span>
+                    </div>
+                    <div class="col-3">
+                        <span class="text-uppercase">Built with</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-1">
+                        <span class="text-slate-500">2018</span>
+                    </div>
+                    <div class="col">
+                        <div class=""><span class="ml-1">onnx2code</span><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="height: 20px;"><path d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06z"></path></svg></span></div>
+                        <span class="text-slate-400">Generate plain C++ code for inference of ONNX (Open Neural Network Exchange) models without dependencies</span>
+                    </div>
+                    <div class="col-3">
+                        <span>
+                            <div>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-1">
+                        <span class="text-slate-500">2018</span>
+                    </div>
+                    <div class="col">
+                        <div class=""><span class="ml-1">onnx2code</span><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="height: 20px;"><path d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06z"></path></svg></span></div>
+                        <span class="text-slate-400">Generate plain C++ code for inference of ONNX (Open Neural Network Exchange) models without dependencies</span>
+                    </div>
+                    <div class="col-3">
+                        <span>
+                            <div>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-1">
+                        <span class="text-slate-500">2018</span>
+                    </div>
+                    <div class="col">
+                        <div class=""><span class="ml-1">onnx2code</span><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="height: 20px;"><path d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06z"></path></svg></span></div>
+                        <span class="text-slate-400">Generate plain C++ code for inference of ONNX (Open Neural Network Exchange) models without dependencies</span>
+                    </div>
+                    <div class="col-3">
+                        <span>
+                            <div>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-1">
+                        <span class="text-slate-500">2018</span>
+                    </div>
+                    <div class="col">
+                        <div class=""><span class="ml-1">onnx2code</span><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="height: 20px;"><path d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06z"></path></svg></span></div>
+                        <span class="text-slate-400">Generate plain C++ code for inference of ONNX (Open Neural Network Exchange) models without dependencies</span>
+                    </div>
+                    <div class="col-3">
+                        <span>
+                            <div>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-1">
+                        <span class="text-slate-500">2018</span>
+                    </div>
+                    <div class="col">
+                        <div class=""><span class="ml-1">onnx2code</span><span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" style="height: 20px;"><path d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06z"></path></svg></span></div>
+                        <span class="text-slate-400">Generate plain C++ code for inference of ONNX (Open Neural Network Exchange) models without dependencies</span>
+                    </div>
+                    <div class="col-3">
+                        <span>
+                            <div>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Primary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Secondary</span>
+                                <span class="badge rounded-pill p-2 text-warning" style="background-color: rgba(251, 191, 36, .1);">Success</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row my-3">
+                    <div class="text-center" style="margin-bottom: 500px;">
+                        <span colspan="3" class="text-slate-500 pt-2">And other projects that I'm not comfortable/allowed to share publicly :)</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
-<script src="https://use.fontawesome.com/ac865e99e2.js"></script>
-<script src="./index.js"></script>
 
 </html>

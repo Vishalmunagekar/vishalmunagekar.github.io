@@ -1,0 +1,77 @@
+body, html {
+    scroll-behavior: smooth;
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert {
+    margin: 0px;
+    border-radius: 0px;
+}
+
+/* .toast {
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
+}
+
+@media (max-width: 575.98px) { 
+    .toast {
+        position: fixed;
+        top: 25rem;
+        margin-left: auto;
+        margin-right: 16%;
+        z-index: 10;
+    }
+} */
+
+body a {
+    text-decoration: none;
+    color: orange;
+}
+
+body a:hover {
+    text-decoration: none;
+    color: rgb(255, 193, 78);
+}
+
+.fa {
+    text-decoration: none;
+    color: orange;
+}
+
+.fa:hover {
+    text-decoration: none;
+    color: rgb(255, 193, 78);
+}
+
+.topbar {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-color: white;
+}
+
+.container {
+    width: auto;
+    padding: 0 15px;
+}
+
+.navbar-toggler {
+    border: 0px solid transparent !important;
+}
+
+.hidden{
+    display: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}

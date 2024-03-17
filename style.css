@@ -1,77 +1,51 @@
-body, html {
-    scroll-behavior: smooth;
-    font-family: 'Lato';
-    font-size: 14px;
-    font-weight: 500;
+body {
+    background-color: rgb(15, 23, 42) !important;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
 
-.alert {
-    margin: 0px;
-    border-radius: 0px;
+.text-slate-100 {
+    color: rgb(239 246 255 / 1);
 }
 
-/* .toast {
-    position: absolute; 
-    top: 20px; 
-    right: 20px;
+.text-slate-200 {
+    color: rgb(209 220 235 / 1);
 }
 
-@media (max-width: 575.98px) { 
-    .toast {
-        position: fixed;
-        top: 25rem;
-        margin-left: auto;
-        margin-right: 16%;
-        z-index: 10;
-    }
-} */
-
-body a {
-    text-decoration: none;
-    color: orange;
+.text-slate-300 {
+    color: rgb(203 213 225 / 1);
 }
 
-body a:hover {
-    text-decoration: none;
-    color: rgb(255, 193, 78);
+.text-slate-400 {
+    color: rgb(148 163 184 / 1);
 }
 
-.fa {
-    text-decoration: none;
-    color: orange;
+.text-slate-500 {
+    color: rgb(100 116 139 / 1);
 }
 
-.fa:hover {
-    text-decoration: none;
-    color: rgb(255, 193, 78);
+/* -------------------------------------- */
+
+
+.text-slate-100:hover {
+    color: rgb(239 246 255 / 1);
 }
 
-.topbar {
-    font-size: 18px;
-    font-weight: 400;
+.text-slate-100:focus-visible {
+    color: rgb(239 246 255 / 1);
 }
 
-.jumbotron {
-    margin-bottom: 0px;
-    background-color: white;
+.transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
 }
 
-.container {
-    width: auto;
-    padding: 0 15px;
+.top-5 {
+    top: 4.84rem !important;
 }
 
-.navbar-toggler {
-    border: 0px solid transparent !important;
-}
-
-.hidden{
-    display: none;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
+.backdrop-blur {
+    backdrop-filter: blur(8px); /* Apply backdrop blur effect */
 }
