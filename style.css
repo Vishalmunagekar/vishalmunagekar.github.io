@@ -5,6 +5,28 @@ body {
     color: white;
 }
 
+.container {
+    max-width: 45%;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .container {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
 .text-slate-100 {
     color: rgb(239 246 255 / 1);
 }
@@ -48,4 +70,8 @@ body {
 
 .backdrop-blur {
     backdrop-filter: blur(8px); /* Apply backdrop blur effect */
+}
+
+@media  {
+    
 }
