@@ -9,21 +9,9 @@ body {
     max-width: 45%;
 }
 
-@media screen and (max-width: 767px) {
-    .container {
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 895px) {
-    .container {
-        max-width: 60%;
-    }
-}
-
 @media screen and (max-width: 1024px) {
     .container {
-        max-width: 80%;
+        max-width: 90%;
     }
 }
 
