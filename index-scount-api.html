@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Vishal Munagekar</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+        <style>
+            .success {
+                background-color: #f3f8f3;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                padding: 10px 10px 10px 20px;
+                border-radius: 0 5px 5px 0;
+                font-size: 15px;
+                border-left: 8px solid #50af51;
+                color: #707070;
+                margin-bottom: 1em;
+            }
+        </style>
+    </head>
+    
+    <body class="">
+        <div class="container m-6">
+            <div class="text-center my-4">
+            <h1>Count-API</h1>
+            <h5>This will make your counting easy!</h5>
+        </div>
+        <section class="intro">
+            <div>
+                <h2>CountAPI</h2>
+                <p>
+                    This API allows you to create simple numeric counters.
+                    <br>
+                    It goes down to:
+                    <ul>
+                        <li>Create a counter and restrict its operations</li>
+                        <li>Reset the value of a counter</li>
+                        <li>Increment/decrement a counter</li>
+                    </ul>
+                    All counters are accesible if you know the key and there are not private counters (yet?).
+                    <br>
+                    Want to track the number of hits a page had? -> Sure.
+                    <br>
+                    Want to know the number of users that clicked on the button "Feed Cow"? -> There you go.
+                </p>
+            </div>
+        </section>
+        <section class="mb-4">
+            <h2>All API URLs</h2>
+            <h5>Create</h5>
+            <pre class="success">
+<a href="http://localhost:8080/count/create?username=something_unique" target="_blank">http://localhost:8080/count/create?username=something_unique</a>
+⇒ 200 { "key": "cf3694bf-7cbb-4979-98f3-0e3fadaf8c77", "value": 0, "error": null, "warning": null }</pre>
+            <h5>Get</h5>
+            <pre class="success">
+<a href="http://localhost:8080/count/get?key=cf3694bf-7cbb-4979-98f3-0e3fadaf8c77" target="_blank">http://localhost:8080/count/get?key=cf3694bf-7cbb-4979-98f3-0e3fadaf8c77</a> (value was 53)
+⇒ 200 { "key": "cf3694bf-7cbb-4979-98f3-0e3fadaf8c77", "value": 54, "error": null, "warning": null }
+
+<a href="http://localhost:8080/count/get?counter=10&key=b548d0b7-f89a-423e-bb91-16baf56257ab" target="_blank">http://localhost:8080/count/get?counter=10&key=b548d0b7-f89a-423e-bb91-16baf56257ab</a> (value was 54)
+⇒ 200 { "key": "cf3694bf-7cbb-4979-98f3-0e3fadaf8c77", "value": 64, "error": null, "warning": null }</pre>
+            <h5>Reset</h5>
+            <pre class="success">
+<a href="http://localhost:8080/count/reset?key=cf3694bf-7cbb-4979-98f3-0e3fadaf8c77" target="_blank">http://localhost:8080/count/reset?key=cf3694bf-7cbb-4979-98f3-0e3fadaf8c77</a> (value was 64)
+⇒ 200 { "key": "cf3694bf-7cbb-4979-98f3-0e3fadaf8c77", "value": 0, "error": null, "warning": null }</pre>
+            <h5>Forgot-key</h5>
+            <pre class="success">
+<a href="http://localhost:8080/count/forgot-key?username=your_username" target="_blank">http://localhost:8080/count/forgot-key?username=your_username</a>
+⇒ 200 { "key": "b548d0b7-f89a-423e-bb91-16baf56257ab", "value": 0, "error": null, "warning": null }</pre>
+        </section>
+        <section class="mb-4">
+            <h2>About API</h2>
+            <h5>Username</h5>
+            <p>Username are meant to avoid name collisions. You may specify a username during the creation of a key. Its
+                recommend use the domain of the application as username to avoid collision with other websites.
+                If the username is not specified the key is assigned to the default username. If your key resides in the
+                default username you don't need to specify it.</p>
+            <h5>Key</h5>
+            <p>After providing a username, it generates a unique key which the user must use for every request. It is
+                crucial for the user to safeguard this key, as without it, access to the associated counter created by
+                the user will be impossible.</p>
+
+            <h4>Create counter</h4>
+            <p>Generates a new key for a new user and initializes their count to zero.</p>
+            <pre><code class="language-java">@GetMapping("/create") 
+public ResponseEntity<CountResponse> createCount(@RequestParam("username") String username) {
+    return new ResponseEntity<>(counterService.generateKeyForNewUser(username), HttpStatus.CREATED);
+}</code></pre>
+            <h4>Get counter</h4>
+            <p>Increases the count associated with the given key by the specified value.</p>
+            <pre><code class="language-java">@GetMapping("/get")
+public ResponseEntity<CountResponse> getCount(@RequestParam("key") String key, @RequestParam(value = "counter", defaultValue = "1") int counter) {
+    return new ResponseEntity<>(counterService.increaseCount(key, BigInteger.valueOf(counter)), HttpStatus.OK);
+}</code></pre>
+            <h4>Reset counter</h4>
+            <p>Resets the count associated with the given key to zero.</p>
+            <pre><code class="language-java">@GetMapping("/reset")
+public ResponseEntity<CountResponse> resetCount(@RequestParam("key") String key) {
+    return new ResponseEntity<>(counterService.resetCount(key), HttpStatus.OK);
+}</code></pre>
+            <h4>Forgot key</h4>
+            <p>Resets the key and count for an existing user.</p>
+            <pre><code class="language-java">@GetMapping("/forgot-key")
+public ResponseEntity<CountResponse> forgotKey(@RequestParam("username") String username) {
+    return new ResponseEntity<>(counterService.forgotKeyForExistingUser(username), HttpStatus.CREATED);
+}</code></pre>
+        </section>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        hljs.initHighlightingOnLoad()();
+    </script>
+</body>
+
+</html>
