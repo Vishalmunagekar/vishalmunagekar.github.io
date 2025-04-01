@@ -59,7 +59,3 @@ body {
 .backdrop-blur {
     backdrop-filter: blur(8px); /* Apply backdrop blur effect */
 }
-
-@media  {
-    
-}
